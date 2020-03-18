@@ -7,6 +7,10 @@ import NoteScreen from '../screens/NoteScreen'
 import MessageScreen from '../screens/MessageScreen'
 import CalendarScreen from '../screens/CalendarScreen'
 
+import NotificationScreen from '../screens/DrawerScreen/NotificationScreen'
+import SettingScreen from '../screens/DrawerScreen/SettingScreen'
+import PasswordScreen from '../screens/DrawerScreen/PasswordScreen'
+
 import { createAppContainer } from 'react-navigation'
 import { createStackNavigator } from 'react-navigation-stack'
 import { createBottomTabNavigator } from 'react-navigation-tabs'
@@ -32,8 +36,18 @@ const IndexTabNavigator = createBottomTabNavigator({
   Payment: PaymentScreen,
 })
 
-const IndexNavigator = createAppContainer({
-  IndexNav: IndexTabNavigator
+const IndexDrawerNavigator = createDrawerNavigator({
+  Index: IndexTabNavigator,
+  Notification: NotificationScreen,
+  Setting: SettingScreen,
+  Password: PasswordScreen,
+  Payment: PaymentScreen,
+  Profile: ProfileScreen,
 })
 
-export default createAppContainer(IndexTabNavigator)
+// const IndexNavigator = createStackNavigator({
+//   IndexDraw: IndexDrawerNavigator,
+//   IndexNav: IndexTabNavigator,
+// })
+
+export default createAppContainer(IndexDrawerNavigator)
