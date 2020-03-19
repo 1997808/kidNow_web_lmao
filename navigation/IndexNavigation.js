@@ -51,11 +51,7 @@ const IndexTabNavigator = createBottomTabNavigator({
     screen: MessageScreen,
     navigationOptions: {
       tabBarIcon: ({ tintColor }) => {
-<<<<<<< HEAD
         return <Ionicons name={'md-text'} size={23} color={tintColor} />;
-=======
-        return <Ionicons name={'md-calendar'} size={23} color={tintColor} />;
->>>>>>> 711b2990e0394bffc92e203bc64e3b18ee4bc5e0
       },
     },
   },
