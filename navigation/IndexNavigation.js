@@ -42,7 +42,7 @@ const IndexTabNavigator = createBottomTabNavigator({
     screen: CalendarScreen,
     navigationOptions: {
       tabBarIcon: ({ tintColor }) => {
-        return <Ionicons name={'md-text'} size={23} color={tintColor} />;
+        return <Ionicons name={'md-calendar'} size={23} color={tintColor} />;
       },
     },
   },
@@ -51,7 +51,7 @@ const IndexTabNavigator = createBottomTabNavigator({
     screen: MessageScreen,
     navigationOptions: {
       tabBarIcon: ({ tintColor }) => {
-        return <Ionicons name={'md-calendar'} size={23} color={tintColor} />;
+        return <Ionicons name={'md-text'} size={23} color={tintColor} />;
       },
     },
   },
