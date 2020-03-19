@@ -1,9 +1,9 @@
-# kidNow_web88
-Web88 kidsNow, đọc hướng dẫn bên dưới
-Push commit vào branch của mình. <br>
-Merge request và pull code vào ra từ nhánh "development" <br>
-git checkout <tên branch> về vào nhánh đó <br>
-Khánh xử lí pull request lên master <br>
-commit có comment, vd "done Profile", "not done Profile, new folder Image" <br>
-development update vào trưa t2 t4 t6 <br>
-master update vào t7 or cn <br>
+<p align="center"><img src="http://kidsnow.edu.vn/images/logo-ngang.png" width="400"></p>
+# KidsNow app mobile for parent to use
+
+## Authors
+* ***Vũ Minh Hải*** - *Owner* - [HaiVM](https://gitlab.com/Web88.vn).
+* **Vũ Thế Quân** - *Developer & Supporter* - [QuanVt](https://gitlab.com/quanvtph06842).
+* **Lê Khánh Huy** - *Developer* - [HuyLK](https://gitlab.com/khanhhuyle22).
+* **Trịnh Thị Thảo** - *Developer* - [ThaoTT](https://gitlab.com/TrinhThiThao09).
+* **Trần Thắng** - *Developer* - [ThangT](https://gitlab.com/thangtran1405).
