@@ -110,11 +110,6 @@ const IndexDrawerNavigator = createDrawerNavigator({
   )
 })
 
-// const IndexNavigator = createStackNavigator({
-//   IndexDraw: IndexDrawerNavigator,
-//   IndexNav: IndexTabNavigator,
-// })
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
