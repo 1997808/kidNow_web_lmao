@@ -1,4 +1,5 @@
 <p align="center"><img src="http://kidsnow.edu.vn/images/logo-ngang.png" width="400"></p>
+
 # KidsNow app mobile for parent to use
 
 ## Authors

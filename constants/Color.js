@@ -5,3 +5,4 @@ export default {
   black: "#111111",
   gray: "#787878",
 }
+// thao 

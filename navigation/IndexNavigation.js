@@ -109,7 +109,7 @@ const IndexDrawerNavigator = createDrawerNavigator({
     </SafeAreaView>
   )
 })
-
+// sưa thanh cong
 // const IndexNavigator = createStackNavigator({
 //   IndexDraw: IndexDrawerNavigator,
 //   IndexNav: IndexTabNavigator,
