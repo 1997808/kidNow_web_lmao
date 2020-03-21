@@ -1,9 +1,14 @@
 import * as React from 'react'
 import { StyleSheet, View, TouchableOpacity, Text, Button } from 'react-native'
 import { connect } from 'react-redux'
-import { setLoading } from '../../actions'
+import { setLoading, setTabBarVisit } from '../../actions'
+import { useFocusEffect } from '@react-navigation/native'
 
-const ProfileScreen = ({ setLoading }) => {
+const ProfileScreen = ({ setTabBarVisit, setLoading }) => {
+  useFocusEffect(() => {
+    setTabBarVisit(false)
+    return () => setTabBarVisit(true)
+  })
   return (
     <View style={styles.container}>
       <View style={styles.mainContent}>
@@ -17,7 +22,7 @@ const ProfileScreen = ({ setLoading }) => {
   )
 }
 
-export default connect(null, { setLoading })(ProfileScreen)
+export default connect(null, { setTabBarVisit, setLoading })(ProfileScreen)
 
 const styles = StyleSheet.create({
   container: {

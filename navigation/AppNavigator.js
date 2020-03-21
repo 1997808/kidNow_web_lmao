@@ -1,7 +1,6 @@
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { NavigationContainer } from '@react-navigation/native'
-import { createDrawerNavigator } from '@react-navigation/drawer';
 
 import TabBarIcon from '../components/TabBarIcon'
 
@@ -10,33 +9,25 @@ import MessageScreen from '../screens/app/MessageScreen'
 import NoteScreen from '../screens/app/NoteScreen'
 import HomeScreen from '../screens/app/HomeScreen'
 import PayScreen from '../screens/app/PayScreen'
-import ProfileScreen from '../screens/app/ProfileScreen'
+import DrawerNavigate from './DrawerNavigator'
+import { connect } from 'react-redux';
 
 const App = createBottomTabNavigator()
 const INITIAL_ROUTE_NAME = 'Home'
-const Drawer = createDrawerNavigator();
 
-function MyDrawer() {
-  return (
-    <Drawer.Navigator initialRouteName="Home">
-      <Drawer.Screen name="Home" component={HomeScreen} />
-      <Drawer.Screen name="Profile" component={ProfileScreen} />
-    </Drawer.Navigator>
-  );
-}
-
-export default function AppNavigator() {
+const AppNavigator = ({ state }) => {
   return (
     <NavigationContainer>
       <App.Navigator initialRouteName={INITIAL_ROUTE_NAME}>
         <App.Screen
           name="Home"
-          component={MyDrawer}
+          component={DrawerNavigate}
           options={{
             title: $t('screens.home.title'),
             tabBarIcon: ({ focused }) => (
               <TabBarIcon focused={focused} name="ios-home" />
-            )
+            ),
+            tabBarVisible: state.app.tabBarVisit
           }}
         />
         <App.Screen
@@ -83,3 +74,5 @@ export default function AppNavigator() {
     </NavigationContainer>
   )
 }
+const mapState = state => ({ state })
+export default connect(mapState, null)(AppNavigator)
