@@ -1,21 +1,21 @@
 import React from 'react'
+import { connect } from 'react-redux';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { NavigationContainer } from '@react-navigation/native'
 
+import DrawerNavigate from './DrawerNavigator'
 import TabBarIcon from '../components/TabBarIcon'
 
 import CalendarScreen from '../screens/app/CalendarScreen'
 import MessageScreen from '../screens/app/MessageScreen'
 import NoteScreen from '../screens/app/NoteScreen'
-import HomeScreen from '../screens/app/HomeScreen'
 import PayScreen from '../screens/app/PayScreen'
-import DrawerNavigate from './DrawerNavigator'
-import { connect } from 'react-redux';
 
 const App = createBottomTabNavigator()
 const INITIAL_ROUTE_NAME = 'Home'
 
 const AppNavigator = ({ state }) => {
+  const tabBarStatus = state.app.tabBarVisit
   return (
     <NavigationContainer>
       <App.Navigator initialRouteName={INITIAL_ROUTE_NAME}>
@@ -27,7 +27,7 @@ const AppNavigator = ({ state }) => {
             tabBarIcon: ({ focused }) => (
               <TabBarIcon focused={focused} name="ios-home" />
             ),
-            tabBarVisible: state.app.tabBarVisit
+            tabBarVisible: tabBarStatus
           }}
         />
         <App.Screen

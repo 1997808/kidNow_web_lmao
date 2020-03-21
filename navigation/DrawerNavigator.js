@@ -1,10 +1,10 @@
 import React from 'react'
+import { connect } from 'react-redux';
 import { createDrawerNavigator } from '@react-navigation/drawer';
+import { setTabBarVisit } from '../actions/index'
 
 import HomeScreen from '../screens/app/HomeScreen'
 import ProfileScreen from '../screens/app/ProfileScreen'
-import { setTabBarVisit } from '../actions/index'
-import { connect } from 'react-redux';
 
 const Drawer = createDrawerNavigator();
 
