@@ -1,18 +1,22 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react'
+import { Provider } from 'react-redux'
+import store from './store'
+import './lang'
 
-import IndexDrawerNavigator from './navigation/IndexNavigation'
+import RootScreen from './screens/RootScreen'
+import LoadingOverlay from './components/LoadingOverlay'
+
+// define global axios
+window.axios = require('axios')
+window.axios.defaults.headers.common['Content-Type'] = 'application/json'
+window.axios.defaults.headers.common['Accept'] = 'application/json'
+window.axios.defaults.baseURL = 'http://kidsnow.edu.vn/api'
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <IndexDrawerNavigator />
-    </View>
-  );
+    <Provider store={store}>
+      <LoadingOverlay />
+      <RootScreen />
+    </Provider>
+  )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
