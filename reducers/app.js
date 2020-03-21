@@ -1,6 +1,7 @@
 const initialState = {
   wakeup: false,
-  loading: false
+  loading: false,
+  tabBarVisit: true
 }
 
 const app = (state = initialState, action) => {
@@ -10,6 +11,9 @@ const app = (state = initialState, action) => {
 
     case 'SET_LOADING':
       return { ...state, loading: action.loading }
+
+    case 'SET_TAB_BAR_VISIT':
+      return { ...state, tabBarVisit: action.tabBarVisit }
 
     default:
       return state
