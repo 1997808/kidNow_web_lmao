@@ -1,19 +1,14 @@
 import * as React from 'react'
 import { StyleSheet, View, TouchableOpacity, Text, Button } from 'react-native'
 import { connect } from 'react-redux'
-import { setLoading, setAuth } from '../../actions'
-import MainHeader from '../../components/MainHeader'
+import { setLoading } from '../../actions'
 
-const HomeScreen = ({ setLoading, setAuth }) => {
+const ProfileScreen = ({ setLoading }) => {
   return (
     <View style={styles.container}>
-      <MainHeader title={$t('screens.home.title')} />
       <View style={styles.mainContent}>
         <TouchableOpacity onPress={() => setLoading(true)}>
-          <Text>Home test loading overlay</Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => setAuth(null)}>
-          <Text>Home test logout</Text>
+          <Text>ProfileScreen test loading overlay</Text>
         </TouchableOpacity>
 
         {/* <Button title="vn" onPress={() => setLang('vi-vn')} /> btn for language */}
@@ -22,7 +17,7 @@ const HomeScreen = ({ setLoading, setAuth }) => {
   )
 }
 
-export default connect(null, { setLoading, setAuth })(HomeScreen)
+export default connect(null, { setLoading })(ProfileScreen)
 
 const styles = StyleSheet.create({
   container: {
