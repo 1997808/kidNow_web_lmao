@@ -2,13 +2,13 @@ import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { NavigationContainer } from '@react-navigation/native'
 
-import TabBarIcon from '../components/TabBarIcon'
+import TabBarIcon from '@components/TabBarIcon'
 
-import CalendarScreen from '../screens/app/CalendarScreen'
-import MessageScreen from '../screens/app/MessageScreen'
-import NoteScreen from '../screens/app/NoteScreen'
-import HomeScreen from '../screens/app/HomeScreen'
-import PayScreen from '../screens/app/PayScreen'
+import CalendarScreen from '@screens/app/CalendarScreen'
+import MessageScreen from '@screens/app/MessageScreen'
+import NoteScreen from '@screens/app/NoteScreen'
+import HomeScreen from '@screens/app/HomeScreen'
+import PayScreen from '@screens/app/PayScreen'
 
 const App = createBottomTabNavigator()
 const INITIAL_ROUTE_NAME = 'Home'

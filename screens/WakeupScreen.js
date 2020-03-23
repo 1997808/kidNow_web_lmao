@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
-import { setWakeup, setAuth } from '../actions'
+import { setWakeup, setAuth } from '@actions'
 import { View, ActivityIndicator } from 'react-native'
 import { get as _get } from 'lodash'
 
-import Colors from '../constants/Colors'
+import Colors from '@constants/Colors'
 
 const LoadingScreen = ({ setWakeup, setAuth }) => {
   const checkLogin = async () => {

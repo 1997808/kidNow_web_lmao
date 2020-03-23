@@ -2,9 +2,9 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { get as _get } from 'lodash'
 
-import WakeupScreen from './WakeupScreen'
-import AuthNavigator from '../navigation/AuthNavigator'
-import AppNavigator from '../navigation/AppNavigator'
+import WakeupScreen from '@screens/WakeupScreen'
+import AuthNavigator from '@navigations/AuthNavigator'
+import AppNavigator from '@navigations/AppNavigator'
 
 const AppRoot = ({ state }) => {
   let isLogin = _get(state, 'auth.token')
