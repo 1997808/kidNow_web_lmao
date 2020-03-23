@@ -1,13 +1,20 @@
 import React from 'react'
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
+import { useNavigation } from '@react-navigation/native';
 
-export default ProfileButton = props => (
-  <TouchableOpacity style={[styles.btnContainer, props.active ? styles.active : '', props.styles]}>
-    <View style={styles.textContainer}>
-      <Text style={[styles.text, props.active ? styles.activeText : '']}>{props.children}</Text>
-    </View>
-  </TouchableOpacity>
-)
+export default function ProfileButton(props) {
+  const navigation = useNavigation();
+  return (
+    < TouchableOpacity
+      style={[styles.btnContainer, props.active ? styles.active : '', props.styles]}
+      onPress={() => navigation.navigate(props.pageName)}
+    >
+      <View style={styles.textContainer}>
+        <Text style={[styles.text, props.active ? styles.activeText : '']}>{props.children}</Text>
+      </View>
+    </TouchableOpacity >
+  )
+}
 
 const styles = StyleSheet.create({
   btnContainer: {

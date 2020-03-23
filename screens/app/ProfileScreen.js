@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StyleSheet, View, TouchableOpacity, Text, Button, Image, TextInput } from 'react-native'
+import { StyleSheet, View, Text, Image, ScrollView } from 'react-native'
 import { connect } from 'react-redux'
 import { setLoading, setTabBarVisit } from '../../actions'
 import { useFocusEffect } from '@react-navigation/native'
@@ -15,46 +15,48 @@ const ProfileScreen = ({ setTabBarVisit, setLoading }) => {
   })
   return (
     <View style={styles.container}>
-      <Image
-        style={styles.image}
-        source={{ uri: 'https://cdn.pixabay.com/photo/2017/02/01/22/02/mountain-landscape-2031539__340.jpg' }}
-      />
-      <View style={styles.btnContainer}>
-        <ProfileButton styles={styles.btn} active>Phụ huynh</ProfileButton>
-        <ProfileButton styles={styles.btn}>Học sinh</ProfileButton>
-      </View>
-
-      <View style={styles.imgContainer}>
+      <ScrollView>
         <Image
-          style={styles.avatar}
-          source={require('../../assets/icon/Child-77.png')}
+          style={styles.image}
+          source={{ uri: 'https://cdn.pixabay.com/photo/2017/02/01/22/02/mountain-landscape-2031539__340.jpg' }}
         />
-      </View>
-
-      <View style={{ flex: 1, alignItems: 'center' }}>
-        <Text>Phụ huynh: Nguyễn Văn Ngọc</Text>
-        <Text>Tài khoản: 0380006353</Text>
-
-        <View style={{ width: '80%' }}>
-          <InputField>Số điện thoại</InputField>
-          <InputField>Số điện thoại dự phòng</InputField>
-          <InputField>Email</InputField>
-
-          <Text style={{ padding: 5, fontSize: 16 }}>Giới tính</Text>
-          <View style={{ width: '40%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around' }}>
-            <RadioButton selected />
-            <Text>Nam</Text>
-
-            <RadioButton />
-            <Text>Nữ</Text>
-          </View>
-
-          <InputField>Địa chỉ</InputField>
-          <ProfileButton active>LƯU CHỈNH SỬA</ProfileButton>
+        <View style={styles.btnContainer}>
+          <ProfileButton styles={styles.btn} active>Phụ huynh</ProfileButton>
+          <ProfileButton styles={styles.btn} pageName={'Student'}>
+            Học sinh
+        </ProfileButton>
         </View>
-      </View>
 
+        <View style={styles.imgContainer}>
+          <Image
+            style={styles.avatar}
+            source={require('../../assets/icon/Child-77.png')}
+          />
+        </View>
 
+        <View style={{ flex: 1, alignItems: 'center' }}>
+          <Text style={styles.text}>Phụ huynh: Nguyễn Văn Ngọc</Text>
+          <Text style={styles.text}>Tài khoản: 0380006353</Text>
+
+          <View style={{ width: '80%' }}>
+            <InputField>Số điện thoại</InputField>
+            <InputField>Số điện thoại dự phòng</InputField>
+            <InputField>Email</InputField>
+
+            <Text style={styles.text}>Giới tính</Text>
+            <View style={{ width: '40%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around' }}>
+              <RadioButton selected />
+              <Text>Nam</Text>
+
+              <RadioButton />
+              <Text>Nữ</Text>
+            </View>
+
+            <InputField>Địa chỉ</InputField>
+            <ProfileButton styles={styles.saveBtn} active>LƯU CHỈNH SỬA</ProfileButton>
+          </View>
+        </View>
+      </ScrollView>
       {/* <Text>{$t('')}</Text> */}
       {/* <Text>{$t('validation.accepted', { field: 'abc' })}</Text> */}
     </View >
@@ -100,4 +102,12 @@ const styles = StyleSheet.create({
     width: '50%',
     height: 40
   },
+
+  text: {
+    padding: 5
+  },
+
+  saveBtn: {
+    marginVertical: 20
+  }
 })

@@ -1,10 +1,27 @@
 import React from 'react'
 import { connect } from 'react-redux';
+import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { setTabBarVisit } from '../actions/index'
 
 import HomeScreen from '../screens/app/HomeScreen'
 import ProfileScreen from '../screens/app/ProfileScreen'
+import ProfileStuScreen from '../screens/app/ProfileStuScreen'
+
+const Stack = createStackNavigator();
+
+const ProfileNavigator = () => {
+  return (
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false
+      }}
+    >
+      <Stack.Screen name="Parent" component={ProfileScreen} />
+      <Stack.Screen name="Student" component={ProfileStuScreen} />
+    </Stack.Navigator>
+  );
+}
 
 const Drawer = createDrawerNavigator();
 
@@ -14,7 +31,7 @@ const DrawerNavigator = () => {
       <Drawer.Screen name="Home" component={HomeScreen} />
       <Drawer.Screen
         name="Profile"
-        component={ProfileScreen}
+        component={ProfileNavigator}
       />
     </Drawer.Navigator>
   );

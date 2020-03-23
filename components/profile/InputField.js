@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, TextInput } from 'react-native'
 
 export default InputField = props => (
   <View>
-    <Text style={{ padding: 5, fontSize: 16 }}>{props.children}</Text>
+    <Text style={styles.text}>{props.children}</Text>
     <TextInput
       style={styles.inputField}
       placeholder="Type here"
@@ -19,6 +19,11 @@ const styles = StyleSheet.create({
     padding: 5,
     borderWidth: 1,
     borderRadius: 10
+  },
+
+  text: {
+    padding: 5,
+    marginTop: 5,
   },
 })
 
