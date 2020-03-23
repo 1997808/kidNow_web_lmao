@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { StyleSheet, View, TouchableOpacity, Text } from 'react-native'
 import { connect } from 'react-redux'
-import { setAuth } from '../../actions'
+import { setAuth } from '@actions'
 
 const LoginScreen = ({ setAuth }) => {
   const testLogin  = () => {

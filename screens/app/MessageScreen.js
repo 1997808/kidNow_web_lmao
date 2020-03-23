@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { StyleSheet, View, TouchableOpacity, Text } from 'react-native'
 import { connect } from 'react-redux'
-import { setLoading } from '../../actions'
+import { setLoading } from '@actions'
 
 const MessageScreen = ({ setLoading }) => {
   return (

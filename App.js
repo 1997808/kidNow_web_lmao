@@ -3,8 +3,8 @@ import { Provider } from 'react-redux'
 import store from './store'
 import './lang'
 
-import RootScreen from './screens/RootScreen'
-import LoadingOverlay from './components/LoadingOverlay'
+import RootScreen from '@screens/RootScreen'
+import LoadingOverlay from '@components/LoadingOverlay'
 
 // define global axios
 window.axios = require('axios')

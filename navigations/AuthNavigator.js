@@ -2,7 +2,7 @@ import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
 import { NavigationContainer } from '@react-navigation/native'
 
-import LoginScreen from '../screens/auth/LoginScreen'
+import LoginScreen from '@screens/auth/LoginScreen'
 
 const Auth = createStackNavigator()
 const INITIAL_ROUTE_NAME = 'Login'

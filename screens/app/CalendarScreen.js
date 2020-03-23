@@ -1,8 +1,8 @@
 import * as React from 'react'
 import { StyleSheet, View, TouchableOpacity, Text } from 'react-native'
 import { connect } from 'react-redux'
-import { setLoading } from '../../actions'
-import MainHeader from '../../components/MainHeader'
+import { setLoading } from '@actions'
+import MainHeader from '@components/MainHeader'
 
 const CalendarScreen = ({ setLoading }) => {
   return (
