@@ -8,8 +8,8 @@ import TabBarIcon from '@components/TabBarIcon'
 import CalendarScreen from '@screens/app/CalendarScreen'
 import MessageScreen from '@screens/app/MessageScreen'
 import NoteScreen from '@screens/app/NoteScreen'
-import HomeScreen from '@screens/app/HomeScreen'
 import PayScreen from '@screens/app/PayScreen'
+import DrawerNavigate from './DrawerNavigate'
 
 const App = createBottomTabNavigator()
 const INITIAL_ROUTE_NAME = 'Home'

@@ -4,9 +4,9 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { setTabBarVisit } from '../actions/index'
 
-import HomeScreen from '../screens/app/HomeScreen'
-import ProfileScreen from '../screens/app/ProfileScreen'
-import ProfileStuScreen from '../screens/app/ProfileStuScreen'
+import HomeScreen from '@screens/app/HomeScreen'
+import ProfileScreen from '@screens/app/ProfileScreen'
+import ProfileStuScreen from '@screens/app/ProfileStuScreen'
 
 const Stack = createStackNavigator();
 
