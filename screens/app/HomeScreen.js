@@ -7,7 +7,7 @@ import MainHeader from '@components/MainHeader'
 const HomeScreen = ({ setLoading, setAuth }) => {
   return (
     <View style={styles.container}>
-      <MainHeader title={$t('screens.home.title')}/>
+      <MainHeader title={$t('screens.home.title')} hasAvatar hasLogo/>
       <View style={styles.mainContent}>
         <TouchableOpacity onPress={() => setLoading(true)}>
           <Text>Home test loading overlay</Text>
