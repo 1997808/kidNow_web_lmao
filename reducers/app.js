@@ -13,7 +13,7 @@ const app = (state = initialState, action) => {
       return { ...state, loading: action.loading }
 
     case 'SET_TAB_BAR_VISIT':
-      return { ...state, tabBarVisit: action.tabBarVisit }
+      return { ...state, tabBarVisit: action.visit }
 
     default:
       return state

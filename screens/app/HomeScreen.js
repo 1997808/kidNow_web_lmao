@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StyleSheet, View, TouchableOpacity, Text } from 'react-native'
+import { StyleSheet, View, TouchableOpacity, Text, Button } from 'react-native'
 import { connect } from 'react-redux'
 import { setLoading, setAuth } from '@actions'
 import MainHeader from '@components/MainHeader'
@@ -15,6 +15,8 @@ const HomeScreen = ({ setLoading, setAuth }) => {
         <TouchableOpacity onPress={() => setAuth(null)}>
           <Text>Home test logout</Text>
         </TouchableOpacity>
+
+        {/* <Button title="vn" onPress={() => setLang('vi-vn')} /> btn for language */}
       </View>
     </View>
   )
