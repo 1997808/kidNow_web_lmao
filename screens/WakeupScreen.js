@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import { setWakeup, setAuth } from '@actions'
-import { View, ActivityIndicator } from 'react-native'
+import { View, StyleSheet, Image, Text, ImageBackground } from 'react-native'
 import { get as _get } from 'lodash'
 
 import Colors from '@constants/Colors'
@@ -18,9 +18,47 @@ const LoadingScreen = ({ setWakeup, setAuth }) => {
   }, [])
 
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <ActivityIndicator size="large" color={Colors.primary} />
+    <View style={styles.container}>
+      <View style={styles.logoContainer}>
+        <Image source={require('@assets/images/logo-1.png')} />
+      </View>
+      <ImageBackground
+        resizeMode="contain"
+        source={require('@assets/images/hint-school.png')}
+        style={styles.hintContainer}
+      />
+      <View style={styles.versionContainer}>
+        <View>
+          <Text style={styles.textLink}>
+            {$t('version', { param: APP_VERSION })}
+          </Text>
+          <Text style={styles.textLink}>{APP_URL}</Text>
+        </View>
+      </View>
     </View>
   )
 }
+const styles = StyleSheet.create({
+  container: {
+    flex: 1
+  },
+  logoContainer: {
+    flex: 2,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  hintContainer: {
+    flex: 1,
+    justifyContent: 'center'
+  },
+  versionContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  textLink: {
+    marginVertical: 5,
+    color: Colors.primary
+  }
+})
 export default connect(null, { setWakeup, setAuth })(LoadingScreen)

@@ -23,6 +23,7 @@ const lang = {
   fullName: 'Họ và tên',
   fogotPassword: 'Quên mật khẩu',
   passwordConfirm: 'Xác nhận mật khẩu',
+  version: 'Phiên bản {{param}}'
 }
 
 export default lang
