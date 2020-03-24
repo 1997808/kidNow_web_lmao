@@ -2,15 +2,21 @@ import React from 'react'
 import { connect } from 'react-redux';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import { setTabBarVisit } from '../actions/index'
+import { setTabBarVisit } from '@actions/index'
 
 import HomeScreen from '@screens/app/HomeScreen'
 import ProfileScreen from '@screens/app/ProfileScreen'
 import ProfileStuScreen from '@screens/app/ProfileStuScreen'
+import { useFocusEffect } from '@react-navigation/native';
 
 const Stack = createStackNavigator();
-
-const ProfileNavigator = () => {
+const a = ({ setTabBarVisit }) => {
+  useFocusEffect(() => {
+    setTabBarVisit(false)
+    return () => {
+      setTabBarVisit(true)
+    }
+  })
   return (
     <Stack.Navigator
       screenOptions={{
@@ -22,6 +28,7 @@ const ProfileNavigator = () => {
     </Stack.Navigator>
   );
 }
+const ProfileNavigator = connect(null, { setTabBarVisit })(a)
 
 const Drawer = createDrawerNavigator();
 

@@ -25,4 +25,3 @@ export default function RadioButton(props) {
     </View>
   );
 }
-//https://stackoverflow.com/questions/31889921/how-to-implement-radio-button-in-react-native/36229563

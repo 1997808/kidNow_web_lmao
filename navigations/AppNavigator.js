@@ -9,7 +9,7 @@ import CalendarScreen from '@screens/app/CalendarScreen'
 import MessageScreen from '@screens/app/MessageScreen'
 import NoteScreen from '@screens/app/NoteScreen'
 import PayScreen from '@screens/app/PayScreen'
-import DrawerNavigate from './DrawerNavigate'
+import DrawerNavigate from '@navigations/DrawerNavigator'
 
 const App = createBottomTabNavigator()
 const INITIAL_ROUTE_NAME = 'Home'

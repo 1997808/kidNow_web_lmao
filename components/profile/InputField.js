@@ -7,8 +7,6 @@ export default InputField = props => (
     <TextInput
       style={styles.inputField}
       placeholder="Type here"
-    // onChangeText={() => { }}
-    // value={}
     />
   </View>
 )

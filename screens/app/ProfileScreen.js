@@ -1,36 +1,36 @@
 import * as React from 'react'
 import { StyleSheet, View, Text, Image, ScrollView } from 'react-native'
 import { connect } from 'react-redux'
-import { setLoading, setTabBarVisit } from '../../actions'
-import { useFocusEffect } from '@react-navigation/native'
+import { setLoading, setTabBarVisit } from '@actions'
 
-import RadioButton from '../../components/profile/RadioButton'
-import ProfileButton from '../../components/profile/ProfileButton'
-import InputField from '../../components/profile/InputField'
+import RadioButton from '@components/profile/RadioButton'
+import ProfileButton from '@components/profile/ProfileButton'
+import InputField from '@components/profile/InputField'
 
-const ProfileScreen = ({ setTabBarVisit, setLoading }) => {
-  useFocusEffect(() => {
-    setTabBarVisit(false)
-    return () => setTabBarVisit(true)
-  })
+const ProfileScreen = () => {
   return (
     <View style={styles.container}>
       <ScrollView>
         <Image
           style={styles.image}
-          source={{ uri: 'https://cdn.pixabay.com/photo/2017/02/01/22/02/mountain-landscape-2031539__340.jpg' }}
+          source={{
+            uri:
+              'https://cdn.pixabay.com/photo/2017/02/01/22/02/mountain-landscape-2031539__340.jpg'
+          }}
         />
         <View style={styles.btnContainer}>
-          <ProfileButton styles={styles.btn} active>Phụ huynh</ProfileButton>
-          <ProfileButton styles={styles.btn} pageName={'Student'}>
+          <ProfileButton style={styles.btn} active>
+            Phụ huynh
+          </ProfileButton>
+          <ProfileButton style={styles.btn} pageName={'Student'}>
             Học sinh
-        </ProfileButton>
+          </ProfileButton>
         </View>
 
         <View style={styles.imgContainer}>
           <Image
             style={styles.avatar}
-            source={require('../../assets/icon/Child-77.png')}
+            source={require('@assets/icon/Child-77.png')}
           />
         </View>
 
@@ -44,7 +44,14 @@ const ProfileScreen = ({ setTabBarVisit, setLoading }) => {
             <InputField>Email</InputField>
 
             <Text style={styles.text}>Giới tính</Text>
-            <View style={{ width: '40%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around' }}>
+            <View
+              style={{
+                width: '40%',
+                flexDirection: 'row',
+                alignItems: 'center',
+                justifyContent: 'space-around'
+              }}
+            >
               <RadioButton selected />
               <Text>Nam</Text>
 
@@ -53,13 +60,13 @@ const ProfileScreen = ({ setTabBarVisit, setLoading }) => {
             </View>
 
             <InputField>Địa chỉ</InputField>
-            <ProfileButton styles={styles.saveBtn} active>LƯU CHỈNH SỬA</ProfileButton>
+            <ProfileButton style={styles.saveBtn} active>
+              LƯU CHỈNH SỬA
+            </ProfileButton>
           </View>
         </View>
       </ScrollView>
-      {/* <Text>{$t('')}</Text> */}
-      {/* <Text>{$t('validation.accepted', { field: 'abc' })}</Text> */}
-    </View >
+    </View>
   )
 }
 
@@ -90,12 +97,12 @@ const styles = StyleSheet.create({
     width: 100,
     height: 100,
     borderRadius: 50,
-    resizeMode: 'cover',
+    resizeMode: 'cover'
   },
 
   btnContainer: {
     flexDirection: 'row',
-    width: '100%',
+    width: '100%'
   },
 
   btn: {

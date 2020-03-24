@@ -1,21 +1,29 @@
 import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
-import RNPickerSelect from 'react-native-picker-select';
+import { View, Text, StyleSheet, Picker } from 'react-native'
 
 export default DropDown = props => {
   return (
-    <View style={props.styles}>
+    <View style={props.style}>
       <Text>{props.children}</Text>
-      <RNPickerSelect
-        onValueChange={(value) => console.log(value)}
-        items={props.items}
-      />
+      <Picker
+        selectedValue={props.value}
+        style={styles.pickerStyleType}
+        onValueChange={(itemValue, itemIndex) =>
+          props.onValueChange(itemValue, itemIndex)
+        }
+      >
+        {props.items.map((item, id) => (
+          <Picker.Item key={id} label={item.label} value={item.value} />
+        ))}
+      </Picker>
     </View>
-  );
-};
+  )
+}
 
-// items={[
-//   { label: 'Football', value: 'football' },
-//   { label: 'Baseball', value: 'baseball' },
-//   { label: 'Hockey', value: 'hockey' },
-// ]}
+const styles = StyleSheet.create({
+  pickerStyleType: {
+    height: 40,
+    paddingVertical: 8,
+    color: 'black'
+  }
+})
