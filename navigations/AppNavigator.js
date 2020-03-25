@@ -7,7 +7,7 @@ import TabBarIcon from '@components/TabBarIcon'
 
 import CalendarScreen from '@screens/app/CalendarScreen'
 import MessageScreen from '@screens/app/MessageScreen'
-import NoteScreen from '@screens/app/NoteScreen'
+import NoteScreen from '@screens/app/note/index'
 import PayScreen from '@screens/app/PayScreen'
 import DrawerNavigate from '@navigations/DrawerNavigator'
 
@@ -18,7 +18,12 @@ const AppNavigator = ({ state }) => {
   const tabBarStatus = state.app.tabBarVisit
   return (
     <NavigationContainer>
-      <App.Navigator initialRouteName={INITIAL_ROUTE_NAME}>
+      <App.Navigator 
+        initialRouteName={INITIAL_ROUTE_NAME}
+        screenOptions={{
+          header:() => null
+        }}
+      >
         <App.Screen
           name="Home"
           component={DrawerNavigate}

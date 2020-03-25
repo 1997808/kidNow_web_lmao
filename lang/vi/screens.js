@@ -6,7 +6,8 @@ export default {
     title: 'Trang chủ'
   },
   note: {
-    title: 'Ghi chú'
+    title: 'Ghi chú',
+    detail:'Chi tiết nội dung ghi chú'
   },
   calendar: {
     title: 'Lịch'
