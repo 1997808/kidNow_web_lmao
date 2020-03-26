@@ -34,7 +34,7 @@ const IndexNav = ({ navigation }, props) => {
         title={$t('screens.home.title')}
         hasAvatar
         hasLogo
-        goBack={() => navigation.navigate('Home')}
+      // goBack={() => navigation.navigate('Home')}
       />
       <View style={styles.dropContainer}>
         <DropDown
@@ -63,8 +63,6 @@ export default IndexNav
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center'
   },
 
