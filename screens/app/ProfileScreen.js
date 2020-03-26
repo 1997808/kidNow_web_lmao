@@ -3,9 +3,9 @@ import { StyleSheet, View, Text, Image, ScrollView } from 'react-native'
 import { connect } from 'react-redux'
 import { setLoading, setTabBarVisit } from '@actions'
 
-import RadioButton from '@components/profile/RadioButton'
-import ProfileButton from '@components/profile/ProfileButton'
-import InputField from '@components/profile/InputField'
+import RadioButton from '@components/index/profile/RadioButton'
+import ProfileButton from '@components/index/profile/ProfileButton'
+import InputField from '@components/index/profile/InputField'
 
 const ProfileScreen = () => {
   return (

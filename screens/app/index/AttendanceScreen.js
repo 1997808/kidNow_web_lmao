@@ -1,16 +1,18 @@
 import React from 'react'
 import { StyleSheet, View, TouchableOpacity, Text } from 'react-native'
-import IndexNav from '../../../components/profile/IndexNav'
+import IndexNav from '@components/index/profile/IndexNav'
+import Attendance from '@components/index/Attendance'
+import Data from '@assets/Data'
 
 const AttendanceScreen = props => {
   return (
     <View style={styles.container}>
       <IndexNav />
-      <View style={styles.mainContent}>
-        <TouchableOpacity>
-          <Text>AttendanceScreen test loading overlay</Text>
-        </TouchableOpacity>
-      </View>
+      <Attendance />
+      <Attendance />
+      <Attendance />
+      <Attendance />
+      <Attendance />
     </View>
   )
 }

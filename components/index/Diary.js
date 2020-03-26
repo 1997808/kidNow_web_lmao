@@ -2,7 +2,7 @@ import React from 'react'
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 import { Ionicons } from '@expo/vector-icons'
 
-const Attendance = props => {
+const Diary = props => {
   return (
     <TouchableOpacity style={styles.item}>
       <View style={{ flexDirection: 'row', alignItems: 'center', width: '80%' }}>
@@ -33,4 +33,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export default Attendance
+export default Diary

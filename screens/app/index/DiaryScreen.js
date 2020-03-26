@@ -1,6 +1,7 @@
 import React from 'react'
 import { StyleSheet, View, TouchableOpacity, Text } from 'react-native'
-import IndexNav from '../../../components/profile/IndexNav'
+import IndexNav from '@components/index/profile/IndexNav'
+
 
 const DiaryScreen = props => {
   return (

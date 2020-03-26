@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { StyleSheet, View, Text } from 'react-native'
 import MainHeader from '@components/MainHeader'
-import DropDown from '@components/profile/DropDown'
+import DropDown from '@components/index/profile/DropDown'
 import Colors from '@constants/Colors'
 
 const IndexNav = ({ navigation }, props) => {

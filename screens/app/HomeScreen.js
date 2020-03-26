@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { StyleSheet, View, ScrollView, Text, Button, TouchableOpacity, Image } from 'react-native'
 import { connect } from 'react-redux'
 import { setAuth } from '@actions'
-import IndexNav from '@components/profile/IndexNav'
-import Attendance from '../../components/index/Attendance'
+import IndexNav from '@components/index/profile/IndexNav'
+import Attendance from '@components/index/Attendance'
 import Data from '@assets/Data'
 
 const HomeScreen = ({ setAuth, navigation }) => {

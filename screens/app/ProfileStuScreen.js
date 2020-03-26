@@ -3,9 +3,9 @@ import { StyleSheet, View, Text, Image, ScrollView } from 'react-native'
 import { connect } from 'react-redux'
 import { setLoading, setTabBarVisit } from '@actions'
 
-import ProfileButton from '@components/profile/ProfileButton'
-import InputField from '@components/profile/InputField'
-import DropDown from '@components/profile/DropDown'
+import ProfileButton from '@components/index/profile/ProfileButton'
+import InputField from '@components/index/profile/InputField'
+import DropDown from '@components/index/profile/DropDown'
 
 const ProfileStuScreen = () => {
   const [bloodType, setBloodType] = useState()
