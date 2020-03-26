@@ -1,12 +1,12 @@
 export default Data = {
-  attendance = {
+  attendance: {
     id: 'p1',
     description: 'Đã đến trường điểm danh',
     time: '7h49 pm',
     teacher: 'Vũ Minh Hải'
   },
 
-  diary = {
+  diary: {
     id: 'p1',
     student: 'Đức',
     description: 'Chào mừng bạn đến với ứng dụng',
@@ -14,14 +14,14 @@ export default Data = {
     teacher: 'Vũ Minh Hải'
   },
 
-  lunch = {
+  lunch: {
     id: 'p1',
     food: 'Bánh mỳ, Sữa, Hoa quả',
     time: '13h30 pm',
     teacher: 'Vũ Minh Hải'
   },
 
-  health =[
+  health: [
     {
       id: 'p1',
       status: 1,
@@ -36,9 +36,10 @@ export default Data = {
       description: 'Đức has been slained',
       time: '13h30 pm',
       teacher: 'Vũ Minh Hải'
-    }],
+    }
+  ],
 
-  imgVideo = {
+  imgVideo: {
     id: 'p1',
     description: 'Đức hiện lên trong bức ảnh',
     url: 'https://aboutreact.com/wp-content/uploads/2018/07/react_native_imageview.png',

@@ -1,22 +1,21 @@
 import React from 'react'
 import { StyleSheet, View, TouchableOpacity, Text } from 'react-native'
-import { connect } from 'react-redux'
-import MainHeader from '@components/MainHeader'
+import IndexNav from '../../../components/profile/IndexNav'
 
-const AttendanceScreen = props => {
+const MenuScreen = props => {
   return (
     <View style={styles.container}>
-      <MainHeader />
+      <IndexNav />
       <View style={styles.mainContent}>
         <TouchableOpacity>
-          <Text>Calendar test loading overlay</Text>
+          <Text>MenuScreen test loading overlay</Text>
         </TouchableOpacity>
       </View>
     </View>
   )
 }
 
-export default connect(null, {})(AttendanceScreen)
+export default MenuScreen
 
 const styles = StyleSheet.create({
   container: {

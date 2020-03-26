@@ -9,14 +9,14 @@ const IndexNav = ({ navigation }, props) => {
   const [date, setDate] = useState('2020')
   const data = {
     page: [
-      { label: 'Mọi hoạt động', value: '0' },
-      { label: 'Điểm danh', value: '1' },
-      { label: 'Nhật ký', value: '2' },
-      { label: 'Thực đơn', value: '3' },
-      { label: 'Sức khỏe', value: '4' },
-      { label: 'Chơi và Học', value: '5' },
-      { label: 'Ảnh', value: '6' },
-      { label: 'Video', value: 'B' }
+      { label: 'Mọi hoạt động', value: 'Home' },
+      { label: 'Điểm danh', value: 'Attendance' },
+      { label: 'Nhật ký', value: 'Diary' },
+      { label: 'Thực đơn', value: 'Menu' },
+      { label: 'Sức khỏe', value: 'Health' },
+      { label: 'Chơi và Học', value: 'LearnPlay' },
+      { label: 'Ảnh', value: 'Image' },
+      { label: 'Video', value: 'Video' }
     ],
     date: [
       { label: 'Năm hiện tại', value: '2020' },
@@ -42,6 +42,7 @@ const IndexNav = ({ navigation }, props) => {
           items={data.page}
           value={page}
           onValueChange={value => setPage(value)}
+          pageName={'Attendance'}
         />
 
         <DropDown
