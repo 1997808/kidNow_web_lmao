@@ -10,7 +10,7 @@ import LoadingOverlay from '@components/LoadingOverlay'
 window.axios = require('axios')
 window.axios.defaults.headers.common['Content-Type'] = 'application/json'
 window.axios.defaults.headers.common['Accept'] = 'application/json'
-window.axios.defaults.baseURL = 'http://kidsnow.edu.vn/api'
+window.axios.defaults.baseURL = 'http://kidsnow.edu.vn/api/'
 window.APP_VERSION = '1.0.0'
 window.APP_URL = 'kidsnow.edu.vn'
 export default function App() {

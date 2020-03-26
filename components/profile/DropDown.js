@@ -4,7 +4,7 @@ import { View, Text, StyleSheet, Picker } from 'react-native'
 export default DropDown = props => {
   return (
     <View style={props.style}>
-      <Text>{props.children}</Text>
+      {props.children ? <Text>{props.children}</Text> : <View />}
       <Picker
         selectedValue={props.value}
         style={styles.pickerStyleType}
@@ -13,7 +13,14 @@ export default DropDown = props => {
         }
       >
         {props.items.map((item, id) => (
-          <Picker.Item key={id} label={item.label} value={item.value} />
+          <Picker.Item
+            key={id}
+            label={item.label}
+            value={item.value}
+            onPress={() => {
+              navigation.navigate(props.pageName)
+            }}
+          />
         ))}
       </Picker>
     </View>
@@ -23,7 +30,6 @@ export default DropDown = props => {
 const styles = StyleSheet.create({
   pickerStyleType: {
     height: 40,
-    paddingVertical: 8,
     color: 'black'
   }
 })
