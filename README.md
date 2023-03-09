@@ -1,5 +1,5 @@
-# kidNow_web88
-Web88 kidsNow, đọc hướng dẫn bên dưới
+# kidNow_web_lmao
+Web_lmaokidsNow, đọc hướng dẫn bên dưới
 Push commit vào branch của mình. <br>
 Merge request và pull code vào ra từ nhánh "development" <br>
 git checkout <tên branch> về vào nhánh đó <br>
